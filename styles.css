@@ -1,0 +1,254 @@
+/*CSS Variables-> root is basically defining the scope of the variables*/
+:root {
+  --white: hsl(0, 0%, 100%);
+  --LightGray: hsl(212, 45%, 89%);
+  --GrayishBlue: #b5afff;
+  --button: hsl(218, 44%, 22%);
+  --Pruple: #573cf9;
+  --centre: #4a24cd;
+}
+/*Defaults given in the style-guide */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+body {
+  font-size: 15px;
+  font-family: "Outfit", sans-serif;
+}
+
+p {
+  font-size: 1em;
+}
+
+/*Reset CSS -> Copied these from the net ninja*/
+body,
+p,
+a,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+/*Mobile Width 375px*/
+.upperhalf {
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, minmax(50px, auto));
+  background-image: linear-gradient(#6743ff, #312cea);
+}
+.upperhalf h1 {
+  color: var(--GrayishBlue);
+}
+.one {
+  margin-top: 15px;
+  grid-column: 1 / 7;
+  text-align: center;
+  font-size: 0.5em;
+}
+.circle {
+  /* Circle ki pershani   */
+  position: relative;
+  left: 50%;
+  translate: -50%;
+  padding: 10px;
+  margin: 0;
+  height: 100%;
+  background-image: linear-gradient(#4d22ca, #4734f0);
+  border-radius: 50%;
+  max-width: 30%;
+  /* text ki pershani */
+  font-size: 1em;
+  color: var(--LightGray);
+  text-align: center;
+  text-justify: center;
+}
+.circle p {
+  color: var(--white);
+  font-size: 3em;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.two {
+  grid-column: 1 / 7;
+}
+.three {
+  grid-column: 1 / 7;
+  margin-top: 50px;
+  color: var(--white);
+}
+.comment {
+  font-weight: 549.5;
+}
+.four {
+  color: var(--GrayishBlue);
+  position: relative;
+  left: 50%;
+  translate: -50%;
+  grid-column: 1 / 7;
+  margin-top: 8px;
+  max-width: 75%;
+  margin-bottom: 40px;
+}
+
+/*lower half*/
+.lowerhalf {
+  row-gap: 10px;
+  margin: 25px;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 30px repeat(5, minmax(50px, auto));
+}
+
+.text {
+  color: black;
+  font-size: 1.2em;
+  font-weight: 700;
+  grid-column: 1/7;
+}
+
+.row1 {
+  grid-column: 1/7;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.reaction {
+  background-color: #fff3f2;
+  color: red;
+  display: grid;
+  grid-auto-rows: 50px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.col1 {
+  text-align: start;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.col1 img {
+  padding-right: 10px;
+}
+.col2 {
+  color: var(--LightGray);
+  text-align: end;
+  margin-right: 25px;
+  margin-top: 20px;
+}
+.col2 b {
+  color: black;
+}
+
+.memroy {
+  background-color: #fffbf1;
+  color: #ffb21e;
+  display: grid;
+  grid-auto-rows: 50px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.verbal {
+  background-color: #f2fbfa;
+  color: #00bb8f;
+  display: grid;
+  grid-auto-rows: 50px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.visual {
+  background-color: #f3f3fd;
+  color: #1125d6;
+  display: grid;
+  grid-auto-rows: 50px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.row2 {
+  grid-column: 1/7;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.row3 {
+  grid-column: 1/7;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.row4 {
+  grid-column: 1/7;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+/* button ki bari */
+.but {
+  grid-column: 1/8;
+  display: flex;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+button {
+  color: white;
+  background-color: #303b59;
+  font-size: 1em;
+  position: relative;
+  left: 50%;
+  translate: -50%;
+  width: 115%;
+}
+
+/*Desktop Width 1440px*/
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: #e5fcf5;
+  }
+  .Grid {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    translate: -50%, 50%;
+    translate: -400px;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    background-color: white;
+    grid-template-rows: 500px;
+    border-radius: 7%;
+  }
+
+  .upperhalf {
+    grid-column: 1/2;
+    border-radius: 10%;
+  }
+
+  .lowerhalf {
+    padding-top: 10px;
+    grid-column: 2/3;
+    margin-top: 5px;
+  }
+
+  .reaction,
+  .memroy,
+  .verbal,
+  .visual {
+    padding-top: 15px;
+    height: 60px;
+    border-radius: 25px;
+  }
+}
